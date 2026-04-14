@@ -93,3 +93,17 @@
     height: 200px;
     width: 350px;
 }
+
+
+@media (max-width: 700px){
+    .p{
+        font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    }
+    .p2{
+         font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    }
+}
