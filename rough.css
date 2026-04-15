@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    border-bottom: black solid;
     
 }
 .header h1{
-    color: white;
-    justify-content: center;
+    
+    text-align: center;
 }
 .main-container{
     display: flex;
