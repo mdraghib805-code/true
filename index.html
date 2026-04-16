@@ -8,24 +8,69 @@
 </head>
 <body>
     <header class = "header">
-
-
-        <div class = "hamburger">
+       
+          
+          <div class = "hamburger" ">
                <span></span>
                <span></span>
                <span></span>
            </div>
+           <div class = "off-screen-menu">
+                <img class = "p-icon" src = "profile_icon_transparent.svg" alt = "profile icon">
+                <hr>
+               <ul class = "nav-links">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+           </div>
 
-        
-        <h1>NO FALSE INFORMATION</h1>
+           <div class = "search">
+
+            <img class = "search-icon" src = "search_bar_logo_black.svg" alt = "search icon">
+                <input type = "text" placeholder="Search...">
+            <img class = "close-icon" src = "cross_cancel_logo.svg" alt = "close icon">
+           </div>
+             
+
+
+            <!--
+              <div class = "off-screen-menu">
+              <ul class = "menu">
+                  <li class="d"><a href="index.html">Home</a></li>
+                  <hr>
+                  <li class="d"><a href="#">About</a></li>
+                  <hr>
+                  <li class="d"><a href="#">Contact</a></li>
+                  <hr>
+              </ul>
+          </div>
+          <nav>
+            <span class= "ham-menu">
+              <span></span>
+              <span></span> 
+              <span></span>
+
+            </span>
+          </nav>
+          -->
+
+
+
+
+
+
+            <h1>NO FALSE INFORMATION</h1>
+
     </header>
+    
     <main class = " main-container">
          <div class = "container" id = "one">
             <p class="p">Welcome to our website dedicated to providing accurate and reliable information. We are committed to combating the spread of false information and promoting truth in all aspects of life. Our team of experts works tirelessly to fact-check and verify the information we share, ensuring that our users can trust the content they find here. Join us in our mission to create a more informed and truthful world.</p>
               <p class = "p2">We believe that access to reliable information is a fundamental right, and we strive to empower our users with the knowledge they need to make informed decisions. Our platform is designed to be user-friendly and accessible, making it easy for anyone to find the information they need.</p>
          </div>
          <div class = "container" id = "two">
-            <a  class = "image-link" href="#">
+            <a  class = "image-link" href="iran-conflict.html">
                  <img src = "flags-of-US-Israel-and-Iran.jpg"    alt  = "flag" class="image">
            
               
@@ -36,13 +81,41 @@
         
          <div class = "container" id = "three">
             <a  class = "image-link" href="#">
-                 <img src = "sudan.jpg"    alt  = "flag" class="image">
+                 <img src = "sudan.jpg"    alt  = "people on the bus holding sudan's flag. " class="image">
                  <h1>Sudan Civil War</h1>
                  <p>The ongoing conflict in Sudan has resulted in significant humanitarian crisis.</p>
             </a>
          </div>
 
+         <div class = "container" id = "four">
+            <a  class = "image-link" href="#">
+                 <img src = "Iran-flag-Tehran-skyline-AS-scaled.jpeg"    alt  = "iran" class="image" >
+                 <h1>Iran and International Relations</h1>
+                 <p>Iran's relationships with other nations continue to evolve, impacting regional stability and global politics.</p>
+            </a>
+         </div>
+         <div class = "container" id = "five">
+            <a class = "image-link" href = "#">
+                <img src = "original.avif" alt = "city under attack " class="image">
+                 <h1>Lebanon is on fire</h1>
+                 <p>The city of Beirut is currently experiencing a major fire, causing significant damage and displacement.</p>
+            </a>
+         </div>
+
+
 </main>
+
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+hamburger.addEventListener('click', () => {
+    offScreenMenu.style.left = '0';
+});
+
+</script>
 </body> 
   
 </html>
