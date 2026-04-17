@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     <link rel="stylesheet" href="rough.css">
     <title> Example</title>
 </head>
-<body>
+<body id = "finalBoss">
     <header class = "header">
        
           
-          <div class = "hamburger" ">
+          <div class = "hamburger" id = "hamBurger">
                <span></span>
                <span></span>
                <span></span>
            </div>
-           <div class = "off-screen-menu">
+           <div class = "off-screen-menu" id = "offScreenMenu">
                 <img class = "p-icon" src = "profile_icon_transparent.svg" alt = "profile icon">
                 <hr>
                <ul class = "nav-links">
@@ -24,6 +25,22 @@
                    <li><a href="#">Contact</a></li>
                </ul>
            </div>
+
+
+             <form>
+            <div class="search-container" id = "searchContainer">
+                <button type="submit" class = "search-btn" id = "searchBtn">
+                    <span    class="material-symbols-outlined">
+                    search
+                    </span>
+                </button>
+                <input type="text" placeholder="Search..." class="search-input" id = "searchInput">
+
+            </div>
+        </form>
+
+
+           <!--
            <form>
                 <div class = "search">
 
@@ -31,7 +48,7 @@
                     <input type = "text" placeholder="Search...">
                     <img class = "close-icon" src = "cross_cancel_logo.svg" alt = "close icon">
                 </div>
-            </form>
+            </form>-->
 
 
             <!--
@@ -108,12 +125,72 @@
 
 
 <script>
+    /*
 const hamburger = document.querySelector('.hamburger');
 const offScreenMenu = document.querySelector('.off-screen-menu');
 
 hamburger.addEventListener('click', () => {
     offScreenMenu.style.left = '0';
 });
+*/
+
+
+let offScreenMenu = document.getElementById("offScreenMenu");
+   offScreenMenu.style.left = "-350px";
+    const hamburger = document.getElementById("hamBurger");
+    hamburger.addEventListener("click", function(event){
+        event.preventDefault();
+        if(offScreenMenu.style.left === "0px"){
+            offScreenMenu.style.left = "-350px";
+            
+        } else{
+            offScreenMenu.style.left = "0px";
+            
+
+        }
+    })
+    document.addEventListener("click", function(e) {
+  if (!offScreenMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    offScreenMenu.style.left = "-350px";
+     }
+    });
+
+    let searchContainer = document.getElementById("searchContainer");
+     searchContainer.style.width = "40px";
+    const searchBt = document.getElementById("searchBtn");
+    searchBt.addEventListener("click", function(event){
+        event.preventDefault();
+        if(searchContainer.style.width === "40px"){
+            searchContainer.style.width = "240px";
+            
+        }
+        else{
+            searchContainer.style.width = "40px";
+            
+
+        }
+    })
+   
+
+
+
+
+
+let element = document.getElementById("searchInput");
+    element.style.display = "none";
+    const searchBtn = document.getElementById("searchBtn");
+    searchBtn.addEventListener("click", function(event){
+        event.preventDefault();
+        if(element.style.display === "block"){
+            element.style.display = "none";
+            
+        }
+        else{
+            element.style.display = "block";
+            
+
+        }
+    })
 
 </script>
 </body> 
